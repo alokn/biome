@@ -2,6 +2,7 @@
 
 pub(crate) mod arbitrary_argument;
 pub(crate) mod at_root_query;
+pub(crate) mod at_root_query_clause;
 pub(crate) mod binary_expression;
 pub(crate) mod each_header;
 pub(crate) mod else_clause;
