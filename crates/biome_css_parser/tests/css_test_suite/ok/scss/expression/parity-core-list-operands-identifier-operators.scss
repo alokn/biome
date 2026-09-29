@@ -1,0 +1,9 @@
+$flags:[true==false,foo==foo,false or true,true and not false];
+
+$case:[MiXeD==mixed,MiXeD!=mixed,MiXeD+1];
+
+$singleton:[foo/* left */ == /* right */foo,];
+
+$slashes:[Start / End];
+
+.grid{grid-template-columns:[Main Start] 1fr [End];}

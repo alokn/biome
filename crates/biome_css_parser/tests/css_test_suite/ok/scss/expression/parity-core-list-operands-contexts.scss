@@ -1,0 +1,19 @@
+$gap: 8px; $a: -$gap; $b: +$gap; $c: not false; $d: 1 < 2;
+
+$gap: 8px; @function identity($x) { @return $x; }
+.case-call-operands { minus:identity(-$gap); plus:identity(+$gap); negated:identity(not false); comparison:identity(1 < 2); }
+
+$gap: 8px;
+@mixin values($a: -$gap, $b: +$gap, $c: not false, $d: 1 < 2) { minus:$a; plus:$b; negated:$c; comparison:$d; }
+.case-parameter-default-operands { @include values(); }
+
+$gap: 8px;
+@function minus() { @return -$gap; } @function plus() { @return +$gap; }
+@function negated() { @return not false; } @function compared() { @return 1 < 2; }
+
+$gap: 8px; $x:(minus:-$gap, plus:+$gap, negated:not false, comparison:1 < 2);
+
+$gap: 8px;
+.case-interpolation-operands { minus:#{-$gap}; plus:#{+$gap}; negated:#{not false}; comparison:#{1 < 2}; }
+
+$gap:8px; @function values($x:[-$gap, +$gap, not false, 1 < 2]) { @return $x; } $x:values();
