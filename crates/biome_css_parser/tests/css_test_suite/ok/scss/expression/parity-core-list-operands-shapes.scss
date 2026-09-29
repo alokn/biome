@@ -1,0 +1,17 @@
+$x:();
+
+$x:(a);
+
+$x:(a,);
+
+$x:[a b];
+
+$x:[a, b];
+
+$x:(key: (a, b));
+
+$x:(1 + 2: arithmetic, not false: boolean);
+
+$gap:8px; $x:[(-$gap,), (not false,)];
+
+$gap:8px; $x:[-$gap,];
