@@ -1,0 +1,13 @@
+$gap:8px;
+$x:[- /* minus */ $gap, + /* plus */ $gap, not /* boolean */ false, 1 /* lhs */ < /* rhs */ 2,];
+
+$gap:8px; $x:[
+-$gap, // first item
++$gap, // second item
+not false,
+1 < 2 // final item
+];
+
+$x:[1 + 2 * 3, (1 + 2) * 3, not false and false or true, 1 + 2 < 4, 4 >= 4, 2 != 3, --2];
+
+$gap:8px; @function identity($x) { @return $x; } $x:identity((key:[(-$gap), [not false, 1 < 2], (+$gap,)]));
